@@ -18,6 +18,7 @@ body {
 
 header {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
   padding: 1% 2%;
@@ -99,8 +100,12 @@ nav a {
   flex: 1 1 0;
   max-width: 96%;
   margin: 2% auto;
-  flex-direction: column;
-  justify-content: space-between;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+
+.work-img {
+  padding: 1% 15%;
 }
 
 #work {
