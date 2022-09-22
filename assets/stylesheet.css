@@ -1,49 +1,56 @@
 /* color pallet developed by Colormind.io */
 :root {
-    --pale:   #c6d2c1;
-    --grey:   #4e3e50;
-    --bright: #469687;
-    --green:  #9db87f;
-    --blue:   #517fa9;
-    }
+  --pale:   #c6d2c1;
+  --grey:   #954e9ecc;
+  --bright: #469687;
+  --green:  #9db87f;
+  --blue:   #32577a;
+  }
+
 
 body {
-    background-color: var(--pale);
-    color: var(--grey);
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif
-
+  display: flex;
+  flex-direction: column;
+  line-height: 1.3;  
+  color: var(--grey);
 }
 
 header {
-    height: 50px;
-    display: flex;
-    justify-content: space-between;
-    padding: 3% 5% 0;
-    flex-wrap: wrap;
-    align-content: center;
-    flex-direction: row;
-    border-bottom: 10px solid var(--blue);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1% 2%;
+  background-color: var(--blue);
+  color: var(--green);
 }
 
 h1 {
-  font-size: 4em;
-  margin: .2em 0 0 0;
+  font-size: 200%;
+}
+
+h2 {
+  margin: 2% 0;
+  font-size: 250%;
 }
 
 nav {
-  margin: 1em 0 0 0;
-}
-header ul li {
-    display: inline;
+  
 }
 
-a {
-    color: var(--grey);
-    position: relative;
-    text-decoration: none;
+nav ul {
+  display: flex;
+  justify-content: space-between;
+  min-width: 110%;
+}
+/* cool hover effect i found on css tricks */
+nav a {
+  color: var(--green);
+  position: relative;
+  text-decoration: none;
+  font-weight: 700;
   }
   
-  a::before {
+  nav a::before {
     content: '';
     position: absolute;
     width: 100%;
@@ -57,10 +64,31 @@ a {
     transition: transform .3s ease-in-out;
   }
   
-  a:hover::before {
+  nav a:hover::before {
     transform-origin: left;
     transform: scaleX(1);
   }
 
+.about {
+  display: flex;
+  flex: 1 1 0;
+  max-width: 96%;
+  margin: 2% auto;
+  flex-direction: row;
+}
 
-  
+#about{
+  font-size: 250%;
+  font-weight: 900;
+}
+.about p {
+  padding: 0 15%;
+  font-size: 150%;
+  font-weight: 400;
+}
+
+.about img {
+  display: flex;
+  max-width: 20%;
+  height: auto;
+}
