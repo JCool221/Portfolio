@@ -141,5 +141,11 @@ nav a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
-  
+
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
