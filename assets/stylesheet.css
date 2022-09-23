@@ -97,13 +97,16 @@ nav a {
   height: auto;
 }
 
-.work {
+.navigation {
   display: flex;
   flex: 1 1 0;
   max-width: 96%;
   margin: 2% auto;
   flex-direction: row;
   justify-content: flex-start;
+  font-size: 250%;
+  font-weight: 900;
+
 }
 
 .work-img {
@@ -111,8 +114,6 @@ nav a {
 }
 
 #work {
-  font-size: 250%;
-  font-weight: 900;
 }
 
 .card-container {
@@ -134,4 +135,17 @@ nav a {
   border-radius: 4px;
   padding: 20px;
   transition: all .3s ease-in;
+}
+
+.icon-container {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+}
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
