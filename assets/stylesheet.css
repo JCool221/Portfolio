@@ -48,10 +48,11 @@ h2 {
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   min-width: 80%;
   gap: 20px;
 }
-/* cool hover effect i found on css tricks */
+
 nav a {
   color: var(--green);
   position: relative;
@@ -59,9 +60,15 @@ nav a {
   font-weight: 700;
   }
 
+  nav a:hover {
+    font-size: larger;
+    color: var(--bright);
+  }
+
 .about {
   display: flex;
   flex: 1 1 0;
+  flex-wrap: wrap;
   max-width: 96%;
   margin: 2% auto;
   flex-direction: row;
@@ -74,7 +81,6 @@ nav a {
   font-weight: 900;
 }
 .about p {
-  display: block;
   white-space: pre;  
   font-size: 150%;
   font-weight: 400;
@@ -88,6 +94,7 @@ nav a {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   flex: 1 1 0;
   max-width: 96%;
   margin: 2% auto;
@@ -95,18 +102,17 @@ nav a {
   justify-content: flex-start;
   font-size: 250%;
   font-weight: 900;
-}
-
-#work {
-  padding-right: 15%;
+  gap: 5%;
 }
 
 .pre-img {
-  max-width: 50%;
+  max-width: 500%;
+  height: auto;
 }
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -119,7 +125,6 @@ nav a {
   background: var(--green);
   color: var(--grey);
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -128,7 +133,8 @@ nav a {
   transition: all .3s ease-in;
 }
 .card-image {
-  max-width: fit-content;
+  max-width: 100%;
+  height: auto;
 }
 
 .card:hover {
@@ -140,11 +146,52 @@ nav a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
 
+.icon-image:hover {
+  scale: 1.2;
 }
 
 footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .pre-img {
+    max-width: 100%;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-container {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about p {
+    white-space: normal;
+  }
 }
