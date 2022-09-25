@@ -48,6 +48,7 @@ h2 {
 nav ul {
   display: flex;
   justify-content: center;
+  flex-wrap: wrap;
   min-width: 80%;
   gap: 20px;
 }
@@ -62,6 +63,7 @@ nav a {
 .about {
   display: flex;
   flex: 1 1 0;
+  flex-wrap: wrap;
   max-width: 96%;
   margin: 2% auto;
   flex-direction: row;
@@ -88,6 +90,7 @@ nav a {
 
 .navigation {
   display: flex;
+  flex-wrap: wrap;
   flex: 1 1 0;
   max-width: 96%;
   margin: 2% auto;
@@ -107,6 +110,7 @@ nav a {
 
 .card-container {
   display: flex;
+  flex-wrap: wrap;
   justify-content: center;
   align-items: center;
   gap: 15px;
@@ -147,4 +151,38 @@ footer {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+@media screen and (max-width: 992px) {
+
+  header {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .about {
+    flex-direction: column;
+    align-items: center;
+  }
+
+
+  .navigation {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .card-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .icon-container {
+    align-items: center;
+    justify-content: space-evenly;
+  }
+}
+@media screen and (max-width: 768px) {
+  .about p {
+    white-space: normal;
+  }
 }
