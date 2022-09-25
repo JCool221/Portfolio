@@ -52,12 +52,17 @@ nav ul {
   min-width: 80%;
   gap: 20px;
 }
-/* cool hover effect i found on css tricks */
+
 nav a {
   color: var(--green);
   position: relative;
   text-decoration: none;
   font-weight: 700;
+  }
+
+  nav a:hover {
+    font-size: larger;
+    color: var(--bright);
   }
 
 .about {
@@ -76,7 +81,6 @@ nav a {
   font-weight: 900;
 }
 .about p {
-  display: block;
   white-space: pre;  
   font-size: 150%;
   font-weight: 400;
@@ -89,9 +93,9 @@ nav a {
 }
 
 .navigation {
-  display: flex;
+  /* display: flex;
   flex-wrap: wrap;
-  flex: 1 1 0;
+  flex: 1 1 0; */
   max-width: 96%;
   margin: 2% auto;
   flex-direction: row;
@@ -101,6 +105,8 @@ nav a {
 }
 
 #work {
+  position: relative;
+  top: -350px;
   padding-right: 15%;
 }
 
@@ -123,7 +129,6 @@ nav a {
   background: var(--green);
   color: var(--grey);
   display: flex;
-
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -132,7 +137,8 @@ nav a {
   transition: all .3s ease-in;
 }
 .card-image {
-  max-width: fit-content;
+  max-width: 100%;
+  height: auto;
 }
 
 .card:hover {
@@ -144,7 +150,10 @@ nav a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
 
+.icon-image:hover {
+  scale: 1.2;
 }
 
 footer {
