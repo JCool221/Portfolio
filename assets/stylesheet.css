@@ -12,7 +12,7 @@ body {
   display: flex;
   flex-direction: column;
   line-height: 1.3; 
-  background-color: var(--pale);
+  background-color: black;
   color: var(--grey);
   box-sizing: border-box;
 }
@@ -151,6 +151,22 @@ nav a {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
+}
+
+.icon {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  background-color: var(--pale);
+  border-radius: 10%;
+  padding: 5px;
+  width: 82px;
+  height: auto;
+}
+
+i {
+  font-size: xx-large;
+  color: black;
 }
 
 .icon-image:hover {
