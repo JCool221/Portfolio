@@ -9,6 +9,7 @@
 
 
 body {
+  font-family: 'Roboto Mono', monospace;
   display: flex;
   flex-direction: column;
   line-height: 1.3; 
@@ -48,6 +49,7 @@ img {
   display: flex;
   max-width: 200px;
   max-height: fit-content;
+  border: solid var(--grey);
 }
 
 nav ul {
@@ -110,9 +112,32 @@ nav a {
   gap: 5%;
 }
 
-.pre-img {
+.hero {
+  width: 13rem;
+  height: auto;
+  transition: all .3s ease-in;
+}
+
+
+.hero-img {
   max-width: 500%;
   height: auto;
+  padding: 1rem;
+  background-color: var(--green);
+  border-radius: 5px;
+  transition: 200ms ease-in-out transform,
+              200ms ease-in-out filter;
+}
+
+.hero-content {
+  position: absolute;
+  top: 55%;
+  transform: translate(100%, -50%);
+  background-color: var(--grey);
+  padding: 1rem .5rem;
+  color: var(--pale);
+  text-align: right;
+  transition: 200ms ease-in-out transform;
 }
 
 .card-container {
@@ -125,7 +150,7 @@ nav a {
 
 .card {
   width: 250px;
-  height: auto;
+  height: 285px;
   position: relative;
   background: var(--green);
   color: var(--grey);
@@ -136,17 +161,66 @@ nav a {
   border-radius: 4px;
   padding: 20px;
   transition: all .3s ease-in;
+  overflow: hidden;
 }
 .card-image {
-  max-width: 100%;
+  width: 100%;
   height: auto;
+  transition: 200ms ease-in-out transform,
+              200ms ease-in-out filter;
 }
 
-.card:hover {
-  background: var(--bright);
-  font-size: large;
+.content {
+  position: absolute;
+  top: 55%;
+  transform: translate(100%, -50%);
+  background-color: var(--grey);
+  padding: 1rem .5rem;
+  color: var(--pale);
+  text-align: right;
+  transition: 200ms ease-in-out transform;
 }
 
+h2 {
+  text-shadow: 0 0 .5rem rgba(0, 0, 0, .5);
+}
+.line {
+  width: 70px;
+  height: 5px;
+  background-color: var(--pale);
+  margin: 1rem 0 1rem auto;
+}
+p {
+  font-size: .7rem;
+  text-shadow: 0 0 .2rem rgba(0, 0, 0, .2);
+  margin-bottom: 1rem;
+}
+button {
+  padding: .3rem .5rem;
+  background-color: transparent;
+  font-size: 1rem;
+  font-weight: 600;
+  border: 2px solid #fff;
+  color: #fff;
+  border-radius: .5rem;
+  cursor: pointer;
+  transition: 200ms ease-in-out background-color,
+              200ms ease-in-out color;
+}
+button:hover {
+  background-color: #fff;
+  color: rgba(169, 101, 0, .8);
+}
+
+.card:hover .content {
+  /* background: var(--bright);
+  font-size: large; */
+  transform: translate(0, -50%);
+}
+.card:hover img {
+  transform: scale(1.2);
+  filter: blur(1px);
+}
 .icon-container {
   display: flex;
   justify-content: space-evenly;
