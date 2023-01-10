@@ -149,7 +149,7 @@ nav a {
   } 
 
 .card {
-  width: 250px;
+  width: 300px;
   height: 285px;
   position: relative;
   background: var(--green);
@@ -163,6 +163,11 @@ nav a {
   transition: all .3s ease-in;
   overflow: hidden;
 }
+
+.headshot {
+  border: none;
+}
+
 .card-image {
   width: 100%;
   height: auto;
