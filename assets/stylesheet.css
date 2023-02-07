@@ -113,26 +113,35 @@ nav a {
 }
 
 .hero {
-  width: 13rem;
-  height: auto;
+  overflow: hidden;
+  width: 64rem;
+  height: 33rem;
   transition: all .3s ease-in;
 }
 
+.hero:hover .hero-content {
+  transform: translate(-1rem, -0.5rem);
+}
+
+.hero:hover .hero-img {
+  filter: blur(1px);
+}
 
 .hero-img {
-  max-width: 500%;
+  max-width: 64rem;
   height: auto;
   padding: 1rem;
   background-color: var(--green);
   border-radius: 5px;
-  transition: 200ms ease-in-out transform,
-              200ms ease-in-out filter;
+  /* transition: 200ms ease-in-out transform,
+              200ms ease-in-out filter; */
 }
 
 .hero-content {
-  position: absolute;
-  top: 55%;
-  transform: translate(100%, -50%);
+  position: relative;
+  top: -20rem;
+  left: 1rem;
+  transform: translate(100%, 0);
   background-color: var(--grey);
   padding: 1rem .5rem;
   color: var(--pale);
